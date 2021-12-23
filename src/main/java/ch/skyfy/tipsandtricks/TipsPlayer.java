@@ -48,7 +48,7 @@ public class TipsPlayer {
         // Play a sound
         player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.BLOCK_ANVIL_FALL, SoundCategory.BLOCKS, 1f, 1f);
 
-        // TODO display the tip
+        // TODO display the tip (a big gui (TOP CENTERED, like Advancement Plaques mod))
         MinecraftClient.getInstance().getToastManager().add(new TipsToast(tip));
     }
 
