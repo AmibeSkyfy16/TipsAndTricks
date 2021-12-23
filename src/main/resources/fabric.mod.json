@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tipsandtrick",
+  "version": "${version}",
+
+  "name": "tipsandtrick",
+  "description": "tipsandtrick",
+  "authors": [
+    "Skyfy16"
+  ],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/tipsandtricks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ch.skyfy.tipsandtricks.TipsAndTricks"
+    ]
+  },
+  "mixins": [
+    "tipsandtricks.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
