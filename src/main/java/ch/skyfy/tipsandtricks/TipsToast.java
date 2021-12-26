@@ -3,18 +3,19 @@ package ch.skyfy.tipsandtricks;
 import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.text.TranslatableText;
 
 public class TipsToast implements Toast{
 
-    private final String tip;
+    private final TranslatableText tip;
 
-    public TipsToast(String tip) {
+    public TipsToast(TranslatableText tip) {
         this.tip = tip;
     }
 
     @Override
     public Visibility draw(MatrixStack matrices, ToastManager manager, long startTime) {
-        return null;
+        return Visibility.SHOW;
     }
 
     @Override
