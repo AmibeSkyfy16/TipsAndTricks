@@ -4,6 +4,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.TranslatableText;
 
 import java.util.*;
 
@@ -11,14 +12,14 @@ public class TipsPlayer {
 
     private final ServerPlayerEntity player;
 
-    private final List<String> shuffledTips;
+    private final List<TranslatableText> shuffledTips;
 
     private final Timer timer;
 
     //        private int delay = new Random().nextInt(7_200_00, 10_800_000); // Between 2 hours and 3 hours in millis
     private final int delay = new Random().nextInt(30000, 60000); // test
 
-    public TipsPlayer(ServerPlayerEntity player, List<String> shuffledTips) {
+    public TipsPlayer(ServerPlayerEntity player, List<TranslatableText> shuffledTips) {
         this.player = player;
         this.shuffledTips = shuffledTips;
         timer = new Timer();
@@ -44,7 +45,7 @@ public class TipsPlayer {
         }, delay, delay);
     }
 
-    private void announce(String tip) {
+    private void announce(TranslatableText tip) {
         // Play a sound
         player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.BLOCK_ANVIL_FALL, SoundCategory.BLOCKS, 1f, 1f);
 
