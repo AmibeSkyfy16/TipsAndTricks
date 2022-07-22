@@ -1,7 +1,7 @@
 package ch.skyfy.tipsandtricks;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
 
@@ -24,7 +24,7 @@ public class TipsAndTricks implements ModInitializer {
                 tipsPlayer = new TipsPlayer(player, shuffle());
             }
         });
-        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> CmdDisableTips.register(dispatcher));
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> CmdDisableTips.register(dispatcher));
     }
 
     public static List<String> shuffle() {

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "tipsandtrick",
+  "id": "tipsandtricks",
   "version": "${version}",
 
-  "name": "tipsandtrick",
-  "description": "tipsandtrick",
+  "name": "tipsandtricks",
+  "description": "tipsandtricks",
   "authors": [
     "Skyfy16"
   ],
@@ -24,10 +24,11 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.12",
+    "fabricloader": ">=0.14.8",
     "fabric": "*",
-    "minecraft": "1.18.x",
-    "java": ">=17"
+    "minecraft": "1.19",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=1.8.2+kotlin.1.7.10"
   },
   "suggests": {
     "another-mod": "*"
